@@ -68,3 +68,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+###About the project. The project is a single react page. It was developed with react and scss/sass was used for the css and styling. The project consist of two parts, a form and a section displaying general user information. By default the user cannot make any changes to any of the input fields unless they click on the edit button, clicking the edit button again disables all input fields. In the forms section, when entering the card, it checks the card type dynamically and displays the appropriate logo on both sides, if the card is an invalid card, the blue tick disappears and only appears back when a valid 16 digit card number has been entered. The expiry date and the last 4 digit of the card number updates automatically in the second section displaying general information. The time at the top is also set to display the users real time (WAT). Finally the app has been made to be fully responsive for all devices.  
