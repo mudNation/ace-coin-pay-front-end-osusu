@@ -136,7 +136,7 @@ const CardInput = (props) => {
             <div className="inputSpace"></div>
 
             <div className="singleInputDiv">
-                <input className='cvv' type='text' value = {cvv} onChange={(e) => handleCVV(e.target.value)}/>
+                <input className='cvv' type='text' value = {cvv} onChange={(e) => handleCVV(e.target.value)} disabled={!canEdit}/>
                 <img src={dots} alt='dots menu'/>
             </div>
         </div>
@@ -150,9 +150,9 @@ const CardInput = (props) => {
             <div className="inputSpace"></div>
 
             <div className="multipleInputs">
-                <input type="text" value={expiryMonth} onChange={(e) => handleExpiryMonth(e.target.value)}/>
+                <input type="text" value={expiryMonth} onChange={(e) => handleExpiryMonth(e.target.value)} disabled={!canEdit}/>
                 <div>/</div>
-                <input type="text" value={expiryYear} onChange={(e) => handleExpiryYear(e.target.value)}/>
+                <input type="text" value={expiryYear} onChange={(e) => handleExpiryYear(e.target.value)} disabled={!canEdit}/>
             </div>
         </div>
 
@@ -165,7 +165,7 @@ const CardInput = (props) => {
             <div className="inputSpace"></div>
 
             <div className="singleInputDiv">
-                <input className='password' type='password' value={password} onChange={(e) => setPassword(e.target.value)}/>
+                <input className='password' type='password' value={password} onChange={(e) => setPassword(e.target.value)} disabled={!canEdit}/>
                 <img src={dots} alt='dots menu'/>
             </div>
         </div>
