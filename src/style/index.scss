@@ -1,0 +1,79 @@
+@import "gen";
+
+.wrapper{
+    display: flex; 
+    width: 100%; 
+    top: 0px; 
+    position: relative;
+
+    .closeContainer{
+        @extend .flex-center; 
+        position: absolute; 
+        width: 50px; 
+        height: 50px; 
+        background: rgb(250, 250, 250);;
+        right: 0px; 
+        cursor: pointer; 
+        z-index: 100;
+        top: 0px; 
+        font-size: 20px; 
+    }
+}
+
+
+.indexContainer{
+    display: flex; 
+    position: absolute;
+    box-sizing: border-box;
+    width: 1250px; 
+    margin: auto;
+    margin-top: 50px; 
+    left: 50%; 
+    transform: translateX(-50%);
+
+    .space{
+        width: 80px; 
+    }
+
+    .mobLogo{
+        display: none; 
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .indexContainer{
+        width: 1000px; 
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .indexContainer{
+        width: 850px; 
+    }
+
+    .space{
+        width: 50px; 
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .indexContainer{
+        width: 90%; 
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-bottom: 0px; 
+        justify-content: flex-start;
+        margin-bottom: 30px;
+
+        .mobLogo{
+            display: flex; 
+            width: 100%; 
+            margin-bottom: 50px;
+        }
+    }
+
+    .space{
+        width: 0px; 
+        height: 50px; 
+    }
+}

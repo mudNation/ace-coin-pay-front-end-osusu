@@ -1,0 +1,447 @@
+@import 'gen';
+$cardRadius: 15px; 
+
+.cardDetail{
+    @extend .flex-vertical-center;
+    position: relative;
+    width: 350px; 
+
+    p{
+        margin: 0px; 
+    }
+
+    .card{
+        width: 220px; 
+        height: 330px; 
+        margin: auto; 
+        position: absolute; 
+        left: 50%; 
+        transform: translateX(-50%);
+        border-radius: $cardRadius;
+        box-shadow: 3px 0px 20px 0px #0000000A;
+
+        .cardBackground{
+            position: absolute; 
+            width: 100%; 
+            height: 100%;
+            background-color: white; 
+            opacity: 0.8; 
+            border-radius: $cardRadius;
+        }
+
+        .blueLine{
+            position: absolute;
+            width: 50px; 
+            height: 5px; 
+            background-color: $blueRibbon;
+            left: 50%; 
+            transform: translateX(-50%);
+        }
+
+        .blueTop{
+            top: -5px;
+        }
+
+        .blur{
+            filter: blur(8px);
+            height: 20px; 
+        }
+
+        .circleContainer{
+            width: 100%; 
+            height: 100%; 
+            position: absolute; 
+            overflow: hidden; 
+            z-index: -1;
+            border-radius: $cardRadius;
+
+            .circle{
+                border-radius: 50%; 
+                border: 1px solid $satasGray; 
+                position: absolute;
+            }
+    
+            .circle1{
+                height: 190px; 
+                width: 190px;  
+                bottom: -95px;
+                right: -95px;
+                opacity: 0.2; 
+            }
+    
+    
+            .circle2{
+                height: 310px; 
+                width: 310px; 
+                bottom: -155px;
+                right: -155px; 
+                opacity: 0.3;
+                
+            }
+    
+            .circle3{
+                height: 430px; 
+                width: 430px;  
+                bottom: -215px;
+                right: -215px; 
+                opacity: 0.5;
+            }
+
+            .circle4{
+                height: 550px; 
+                width: 550px;  
+                bottom: -275px;
+                right: -275px;  
+                opacity: 0.7;
+            }
+        }
+
+        
+        .cardInfo{
+            display: flex; 
+            flex-direction: column;
+            padding: 40px 30px; 
+            height: 100%;
+            box-sizing: border-box;
+            color: $cloudBurst;
+
+            .chipHolder{
+                @extend .flex-horizontal-center-between;
+                position: relative; 
+                z-index: 1;
+
+                img{
+                    width: 35px; 
+                }
+
+                i{
+                    font-size: 20px;
+                }
+            }
+
+            .bottomCardInfo{
+                width: 100%; 
+                padding: 0px 30px; 
+                box-sizing: inherit;
+                position: absolute; 
+                bottom: 20px; 
+                left: 0px; 
+
+                p:first-child{
+                    margin-bottom: 10px; 
+                    font-weight: 500;
+                }
+
+                .cardNumber{
+                    @extend .flex-horizontal-center; 
+                    
+                    .dots{
+                        font-size: 5px;
+                        margin-right: 10px; 
+
+                        i:not(last-child){
+                            margin-right: 2px; 
+                        }
+                    }
+
+                    p{
+                        font-weight: bold;
+                        line-height: 100%;
+                        font-size: 18px; 
+                    }
+                }
+
+                .masterCard{
+                    @extend .flex-horizontal-center-between;
+                    margin-top: 30px; 
+
+                    img{
+                        width: 30px; 
+                    }
+
+                    p{
+                        font-weight: 500;
+                    }
+                }
+                
+            }
+        }
+        
+        
+    }
+
+    
+
+    .firstBlock{
+        height: 100px; 
+    }
+
+    .company{
+        background: $mystic;
+        width: 100%;
+        border-radius: 15px;
+        flex: 1; 
+
+        .innerCompany{
+            width: 100%;
+            position: absolute; 
+            bottom: 20px; 
+
+            .companyLabel{
+                @extend .flex-horizontal-center-between;
+                width: 220px; 
+                position: relative; 
+                left: 50%; 
+                transform: translateX(-50%);
+                margin-bottom: 18px; 
+
+                p{
+                    @extend .flex-horizontal-center; 
+                    span{
+                        @extend .flex-center;
+                        width: 20px; 
+                        height: 20px; 
+                        border-radius: 50%; 
+                        background: $cloudBurst; 
+                        color: white; 
+                        font-size: 12px; 
+                        margin-right: 10px; 
+                    }
+                }   
+
+                p:first-child{
+                    color: $cloudBurst;
+                    opacity: 0.8;
+                }
+
+                p:last-child{
+                    font-weight: bold;
+                    color: $cloudBurst;
+                }
+            }
+
+
+            .seperator{
+                @extend .flex-center; 
+                width: 100%; 
+                height: 50px; 
+                position: relative;
+    
+                .whiteBall{
+                    width: 40px; 
+                    height: 40px; 
+                    background-color: white; 
+                    border-radius: 50%; 
+                    position: absolute;
+                }
+    
+                .whiteBall:first-child{
+                    left: -20px; 
+                }
+    
+                .whiteBall:last-child{
+                    right: -20px; 
+                }
+    
+                .line{
+                    width: 85%; 
+                    border: 1px dashed $satasGray; 
+                }
+            }
+
+            .summary{
+                @extend .flex-horizontal-center-between;
+                width: 220px; 
+                margin: auto;
+
+                p{
+                    color: $cloudBurst;
+                    opacity: 0.8;
+                }
+
+                p:last-child{
+                    opacity: 1.0; 
+                    font-weight: bold;
+                    color: $cloudBurst;
+                    font-size: 22px; 
+                    margin-top: 5px; 
+
+                    span:first-child{
+                        font-size: 12px; 
+                    }
+
+                    span:last-child{
+                        font-weight: 400;
+                        opacity: 0.8; 
+                        font-size: 14px; 
+                    }
+                }
+
+                i{
+                    font-size: 20px; 
+                    color: $cloudBurst;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1250px) {
+    .cardDetail{ 
+        .card{
+            width: 80%;
+
+            .cardInfo{
+                .chipHolder{
+                    img{
+                        width: 30px; 
+                    }
+    
+                    i{
+                        font-size: 18px;
+                    }
+                }
+
+                .bottomCardInfo{
+                    p:first-child{
+                        font-size: 14px; 
+                    }
+
+                    .cardNumber{
+                        @extend .flex-horizontal-center; 
+                        
+                        .dots{
+                            font-size: 4px;
+                        }
+    
+                        p{
+                            font-size: 16px; 
+                        }
+                    }
+
+                    .masterCard{
+                        p{
+                            font-size: 14px; 
+                        }
+                    }
+                }
+            }
+        }
+
+        .company{
+            .innerCompany{
+                .companyLabel{
+                    width: 80%; 
+    
+                    p{
+                        font-size: 14px; 
+                    }   
+                }
+
+                .seperator{
+                
+                    .whiteBall{
+                        width: 30px; 
+                        height: 30px; 
+                    }
+        
+                    .whiteBall:first-child{
+                        left: -15px; 
+                    }
+        
+                    .whiteBall:last-child{
+                        right: -15px; 
+                    }
+        
+                    .line{
+                        width: 85%; 
+                    }
+                }
+                
+                .summary{
+                    width: 80%; 
+
+                    p{
+                        font-size: 14px; 
+                    }
+
+                    p:last-child{
+                        font-size: 20px; 
+    
+                        span:first-child{
+                            font-size: 10px; 
+                        }
+    
+                        span:last-child{
+                            font-weight: 400;
+                            opacity: 0.8; 
+                            font-size: 12px; 
+                        }
+                    }
+    
+                    i{
+                        font-size: 20px; 
+                        color: $cloudBurst;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .cardDetail{
+        height: 650px; 
+
+        .card{
+            .circleContainer{
+        
+                .circle1{
+                    height: 250px; 
+                    width: 250px;  
+                    bottom: -125px;
+                    right: -125px;
+                    opacity: 0.1; 
+                }
+        
+        
+                .circle2{
+                    height: 400px; 
+                    width: 400px; 
+                    bottom: -200px;
+                    right: -200px; 
+                    opacity: 0.3;
+                    
+                }
+        
+                .circle3{
+                    height: 550px; 
+                    width: 550px;  
+                    bottom: -275px;
+                    right: -275px; 
+                    opacity: 0.5;
+                }
+    
+                .circle4{
+                    height: 700px; 
+                    width: 700px;  
+                    bottom: -350px;
+                    right: -350px;  
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+
+    .space{
+        width: 50px; 
+    }
+}
+
+
+@media only screen and (max-width: 450px) {
+    .cardDetail{
+        width: 100%; 
+    }
+}

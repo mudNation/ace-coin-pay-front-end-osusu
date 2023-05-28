@@ -1,0 +1,93 @@
+@import 'gen';
+
+.logoSection{
+    @extend .flex-horizontal-center-between;
+    height: 50px;
+    box-sizing: border-box;
+    width: 100%;
+
+    .logoName{
+        @extend .flex-horizontal-center;
+
+        img{
+            width: 50px; 
+            margin-right: 10px; 
+        }
+
+        p{
+            font-size: 25px; 
+            span{
+                font-weight: bold;
+                color: $cloudBurst;
+            }
+        }
+    }
+    
+    .timeContainer{
+        @extend .flex-horizontal-center;  
+        font-size: 18px; 
+        box-sizing: border-box;
+
+        .timeSquare{
+            @extend .flex-center;
+            background: $cloudBurst; 
+            border-radius: 2px; 
+            color: white; 
+            box-sizing: border-box;
+            height: 30px; 
+            width: 20px; 
+            font-weight: 500;
+
+            p{
+                margin: auto; 
+            }
+        }
+
+        .timeSquare:not(:last-child){
+            margin-right: 2px; 
+        }
+
+        .timeColumn{
+            @extend .flex-center; 
+            margin-left: 1px; 
+            margin-right: 3px; 
+            // background: blue; 
+            height: 30px; 
+            line-height: 10%;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 380px) {
+    .logoSection{
+        .logoName{
+    
+            img{
+                width: 30px; 
+                margin-right: 5px; 
+            }
+    
+            p{
+                font-size: 22px; 
+            }
+        }
+
+        .timeContainer{  
+            font-size: 14px; 
+    
+            .timeSquare{
+                height: 25px; 
+                width: 15px; 
+            }
+    
+            .timeSquare:not(:last-child){
+                margin-right: 2px; 
+            }
+    
+            .timeColumn{
+                height: 25px; 
+            }
+        }
+    }
+}

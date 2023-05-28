@@ -1,0 +1,413 @@
+@import "gen";
+
+.cardInput{
+    height: 100%;
+    position: relative;
+    width: 900px;
+
+    .nameLabel{
+        p:nth-child(1){
+            color: $cloudBurst;
+            font-weight: bold; 
+            margin-bottom: 5px;
+            font-size: 18px; 
+        }
+
+        p:nth-child(2){
+            font-size: 14px; 
+            color: $satasGray;
+            font-weight: 500;
+        }
+    }
+
+
+    .cardNumberLabel{
+        @extend .flex-horizontal-center-between;
+        margin-top: 50px; 
+
+        p{
+            margin: 0px; 
+        }
+
+        .edit{
+            color: $blueRibbon; 
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s; 
+        }
+
+        .edit:hover{
+            opacity: 0.8; 
+        }
+    }
+
+    .cardFields{
+        @extend .flex-horizontal-center-between;
+        border: 1px solid $satasGray; 
+        background-color: rgb(250, 250, 250);
+        width: 100%; 
+        margin-top: 30px; 
+        border-radius: 5px;
+        height: 60px; 
+        padding: 20px;
+        box-sizing: border-box;
+        margin-bottom: 40px; 
+        
+
+        div{
+            @extend .flex-horizontal-center; 
+            
+            img{
+                width: 30px; 
+                margin-right: 20px; 
+            }
+    
+            input[type=text]{
+                border:none; 
+                width: 50px; 
+                margin-right: 10px; 
+                font-size: 20px; 
+                color: $satasGray;
+                background-color: rgb(250, 250, 250);
+            }
+    
+            input[type=text]:focus{
+                border:none;  
+                outline: none;
+            }
+    
+            span{
+                width: 3px; 
+                margin-right: 10px; 
+                border: 1px solid $cloudBurst; 
+            }
+        }
+
+        img{
+            width: 30px;
+        }
+    }
+
+    .lowerFields{
+        @extend .flex-horizontal-center-between;
+        margin-bottom: 40px;
+        width: 100%; 
+
+        p{
+            margin: 0px; 
+        }
+
+        .nameLabel{
+            width: 300px;
+        }
+
+        .inputSpace{
+            // width: 20px;
+            // background: blue; 
+            height: 20px;
+        }
+
+        .singleInputDiv{
+            @extend .flex-center;
+            width: 550px;
+            position: relative;
+            height: 60px;  
+            border-radius: 5px; 
+            box-sizing: border-box;
+
+            img{
+                width: 30px; 
+                // margin-right: 20px;
+                z-index: 2;
+                position: absolute; 
+                right: 20px; 
+            }
+            
+            .cvv{
+                text-align: center;
+                width: 100%;
+                color: $cloudBurst;
+                font-size: 20px;
+                font-weight: bold;
+                box-sizing: border-box;
+                outline: none; 
+                border: 1px solid $satasGray; 
+            }
+
+            .password{
+                width: 100%;
+                // margin-left: 20px;
+                font-size: 20px;
+                outline: none; 
+                border: 1px solid $satasGray; 
+                padding: 20px; 
+                box-sizing: border-box;
+            }
+
+            input{
+                // background: green; 
+                height: 100%;
+                position: absolute; 
+                border: 1px solid $satasGray; 
+                border-radius: 5px;
+            }
+
+            :focus{
+                outline: 1px solid $blueRibbon;
+                background-color: rgba(4, 94, 254, 0.1)
+            }
+        }
+
+        .multipleInputs{
+            @extend .flex-horizontal-center-between;
+            width: 550px;
+            height: 60px;
+            box-sizing: border-box;
+            
+
+            input{
+                height: 100%; 
+                box-sizing: border-box;
+                border-radius: 5px;
+                border: 1px solid $satasGray; 
+                text-align: center;
+                font-size: 20px;
+                font-weight: bold;
+                width: 260px;
+            }
+
+            input:focus{
+                outline: 1px solid $blueRibbon;
+                background-color: rgba(4, 94, 254, 0.1)
+            }
+
+            div{
+                font-size: 25px;
+            }
+        }
+
+        
+    }
+
+    button{
+        background-color: $blueRibbon;
+        border: none; 
+        color: white; 
+        width: 100%;
+        padding: 20px;
+        cursor: pointer; 
+        border-radius: 5px; 
+        font-weight: 500;
+        font-size: 18px;
+    }
+}
+
+
+
+@media only screen and (max-width: 1250px) {
+    .cardInput{
+        width: 650px; 
+
+        .nameLabel{
+            p:nth-child(1){
+                
+                font-size: 16px; 
+            }
+    
+            p:nth-child(2){
+                font-size: 12px; 
+            }
+        }
+
+        .cardNumberLabel{
+            p{
+                font-size: 14px;  
+            }
+        }
+    
+
+        .lowerFields{ 
+            .nameLabel{
+                width: 250px;
+            }
+
+            .singleInputDiv{
+                width: 400px; 
+            }
+
+            .multipleInputs{
+                width: 400px; 
+
+                input{
+                    width: 190px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .cardInput{
+        width: 500px; 
+
+        .cardFields{
+            height: 60px;
+
+            div{
+                img{
+                    width: 25px; 
+                }
+            }
+    
+            img{
+                width: 25px;
+            }
+        }
+
+        .lowerFields{ 
+            .nameLabel{
+                width: 250px;
+            }
+
+            .singleInputDiv{
+                width: 250px; 
+                height: 60px;
+
+                img{
+                    width: 25px; 
+                }
+            }
+
+            .multipleInputs{
+                width: 250px; 
+                height: 60px;
+
+                input{
+                    width: 110px;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 850px) {
+    .cardInput{
+        .logoSection{
+            display: none;
+        }
+
+        .cardNumberLabel{
+            margin-top: 0px; 
+        }
+
+        .logoSection{
+            display: none;
+        }
+    }
+
+    .space{
+        width: 50px; 
+    } 
+}
+
+@media only screen and (max-width: 550px) {
+    .cardInput{
+        width: 100%; 
+        .cardFields{
+            div{
+                img{
+                    width: 20px; 
+                    margin-right: 20px; 
+                }
+        
+                input[type=text]{
+                    width: 35px; 
+                    margin-right: 5px; 
+                    font-size: 16px;  
+                }
+        
+                input[type=text]:focus{
+                    border:none;  
+                    outline: none;
+                }
+        
+                span{
+                    width: 3px; 
+                    margin-right: 5px; 
+                }
+            }
+    
+            img{
+                width: 20px;
+            }
+        }
+
+        .lowerFields{
+            flex-direction: column;
+
+            .nameLabel{
+                width: 100%; 
+            }
+
+            .singleInputDiv{
+                width: 100%; 
+            }
+
+            .multipleInputs{
+                width: 100%; 
+
+                input{
+                    width: 45%; 
+                }
+            }
+        }
+    }
+
+    .space{
+        width: 50px; 
+    } 
+}
+
+
+@media only screen and (max-width: 370px) {
+    .cardInput{
+        .nameLabel{
+            p:nth-child(1){
+                font-size: 14px; 
+            }
+    
+            p:nth-child(2){
+                font-size: 10px; 
+            }
+        }
+
+        .cardNumberLabel{
+            p{
+                font-size: 12px;  
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 350px){
+    .cardInput{
+        .cardFields{
+            div{
+                img{
+                    width: 20px; 
+                    margin-right: 10px; 
+                }
+        
+                input[type=text]{
+
+                    width: 30px; 
+
+                    font-size: 13px; 
+                     
+                }
+    
+            }
+        }
+    }
+}

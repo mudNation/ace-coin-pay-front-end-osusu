@@ -1,0 +1,64 @@
+$blueRibbon: #045efe;
+$whiteLilac: #fcfbfe; 
+$mystic: #dee5ec;  
+$selago: #fafcfe; 
+$satasGray: #9ca3b4; 
+$cloudBurst: #1d2a52; 
+$radius: 5px; 
+
+.flex-vertical-center{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-horizontal-center{
+    display: flex;
+    align-items: center;
+}
+
+.flex-horizontal-center-between{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-center{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+section{
+    margin: auto;
+    width: 1200px; 
+}
+
+@mixin primaryBtn($padding, $fontSize){
+    background-color: $primary;
+    color: white; 
+    padding: $padding;
+    border-radius: 5px;
+    border: none; 
+    cursor: pointer; 
+    font-size: $fontSize; 
+}
+
+
+@media only screen and (max-width: 1250px) {
+    section{
+        width: 1000px; 
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    section{
+        width: 800px; 
+    }
+}
+
+@media only screen and (max-width: 850px){
+    section{
+        width: 90%; 
+    }
+}
