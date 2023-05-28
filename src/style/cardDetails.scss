@@ -57,7 +57,7 @@ $cardRadius: 15px;
 
             .circle{
                 border-radius: 50%; 
-                border: 1px solid $satasGray; 
+                border: 3px solid $satasGray; 
                 position: absolute;
             }
     
@@ -68,7 +68,6 @@ $cardRadius: 15px;
                 right: -95px;
                 opacity: 0.2; 
             }
-    
     
             .circle2{
                 height: 310px; 

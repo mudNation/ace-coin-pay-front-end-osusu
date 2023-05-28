@@ -20,11 +20,13 @@ const Index = () => {
     
 
     return(
-        <div className="wrapper">
-
-             <div className='closeContainer'>
-                 <i class="fa-solid fa-xmark"></i>
-             </div>
+        <>
+            <div className="closeWrapper">
+                <div className='closeContainer'>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+             
 
             <div className='indexContainer'>
                 
@@ -40,7 +42,7 @@ const Index = () => {
                     <LogoSection/>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

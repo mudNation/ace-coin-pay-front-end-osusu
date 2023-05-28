@@ -1,14 +1,15 @@
 @import "gen";
 
-.wrapper{
+.closeWrapper{
     display: flex; 
     width: 100%; 
     top: 0px; 
     position: relative;
+    justify-content: flex-end;
+    position: absolute;
 
     .closeContainer{
         @extend .flex-center; 
-        position: absolute; 
         width: 50px; 
         height: 50px; 
         background: rgb(250, 250, 250);;
@@ -23,13 +24,10 @@
 
 .indexContainer{
     display: flex; 
-    position: absolute;
     box-sizing: border-box;
     width: 1250px; 
     margin: auto;
     margin-top: 50px; 
-    left: 50%; 
-    transform: translateX(-50%);
 
     .space{
         width: 80px; 
@@ -57,6 +55,10 @@
 }
 
 @media only screen and (max-width: 850px) {
+    .wrapper{
+        margin-bottom: 30px;
+    }
+
     .indexContainer{
         width: 90%; 
         flex-direction: column-reverse;
@@ -64,6 +66,7 @@
         margin-bottom: 0px; 
         justify-content: flex-start;
         margin-bottom: 30px;
+        // position: relative;
 
         .mobLogo{
             display: flex; 
